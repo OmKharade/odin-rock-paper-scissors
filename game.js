@@ -40,4 +40,5 @@ function game(){
         console.log("You WIN!");
 }
 
-game();
+let startBtn = document.querySelector('#startBtn')
+startBtn.addEventListener('click',game)
