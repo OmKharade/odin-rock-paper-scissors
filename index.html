@@ -6,13 +6,78 @@
     <title>Rock, Paper, Scissors?</title>
     <link rel="stylesheet" href="../rock-paper-scissors/game.css">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
-    </style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900');
+      </style>
 </head>
 <body>
-    <div class="start">
-        <button class="startBtn" id="startBtn">Rock, Paper, Scissors, SHOOT!</button>
+    <div class="start" id="start">
+        <button id="startBtn">Play</button>
     </div>
     <script src="../rock-paper-scissors/game.js"></script>
+    <div class="game" id="game">
+        <div class="gameHeader">
+            <h1 class="gameh1">Choose Wisely</h1>
+        </div>
+        <div class="gameContent">
+            <div class="player">
+                <h2 class="playerh1">Player</h2>
+                <div class="playerContent">
+                    <div class="playerLogo">
+                        <img src="../rock-paper-scissors/assets/nerd.png" alt="logo" class="logo">
+                    </div>
+                    <div class="playerScore">
+                        <p class="score" id="playerScore">Score : 0</p>
+                    </div>
+                </div>
+                <div class="gameChoices">
+                    <div class="gameChoice" id="rock">
+                        <p class="rockTxt" id="rock">Rock</p>
+                        <img src="../rock-paper-scissors/assets/rock.png" alt="Rock" class="rockImg" id="rock" onmouseover="onHover();" onmouseout="offHover();" >
+                    </div>
+                    <div class="gameChoice" id="paper">
+                        <p class="paperTxt" id="paper">Paper</p>
+                        <img src="../rock-paper-scissors/assets/paper.png" alt="Paper" class="paperImg" id="paper">
+                    </div>
+                    <div class="gameChoice" id="scissor">
+                        <p class="scissorTxt" id="scissor">Scissor</p>
+                        <img src="../rock-paper-scissors/assets/scissor.png" alt="Scissor" class="scissorImg" id="scissor">
+                    </div>
+                </div>
+            </div>
+            <div class="player">
+                <h2 class="playerh1">Computer</h1>
+                <div class="playerContent">
+                    <div class="playerLogo">
+                        <img src="../rock-paper-scissors/assets/robot.png" alt="logo" class="logo">
+                    </div>
+                    <div class="playerScore">
+                        <p class="score" id="computerScore">Score : 0</p>
+                    </div>
+                </div>
+                <div class="gameChoices">
+                    <div class="gameChoice" >
+                        <p class="rockTxt" >Rock</p>
+                        <img src="../rock-paper-scissors/assets/rock.png" alt="Rock" class="rockImg">
+                    </div>
+                    <div class="gameChoice" id="paper">
+                        <p class="paperTxt">Paper</p>
+                        <img src="../rock-paper-scissors/assets/paper.png" alt="Paper" class="paperImg">
+                    </div>
+                    <div class="gameChoice" id="scissor">
+                        <p class="scissorTxt">Scissor</p>
+                        <img src="../rock-paper-scissors/assets/scissor.png" alt="Scissor" class="scissorImg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="gameResult">
+        <div class="winner">
+            <img src="../rock-paper-scissors/assets/nerd.png" alt="Player" class="winnerImg" id="playerWin" style="display: none;">
+            <img src="../rock-paper-scissors/assets/robot.png" alt="Computer" class="winnerImg" id="computerWin" style="display: none;">
+            <img src="../rock-paper-scissors/assets/tied.png" alt="Tied" class="winnerImg" id="gameTied" style="display: none;">
+        </div>
+        <a href="index.html" id="playAgainBtn">Try Again?</a>
+    </div>
 </body>
 </html>
